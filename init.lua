@@ -1027,7 +1027,7 @@ require('lazy').setup({
 local mark = require 'harpoon.mark'
 local ui = require 'harpoon.ui'
 
-vim.keymap.set('n', '<leader>a', mark.add_file)
+vim.keymap.set('n', '<leader>a', mark.add_file, { desc = 'add harboon' })
 vim.keymap.set('n', '<C-e>', ui.toggle_quick_menu)
 
 vim.keymap.set('n', '<C-h>', function()
@@ -1044,7 +1044,7 @@ vim.keymap.set('n', '<C-l>', function()
 end)
 -- This is for undotree
 
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+-- vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
 -- vim.opt.undodir = os.getenv 'HOME' .. '/.vim/undodir'
 
@@ -1059,8 +1059,8 @@ vim.keymap.set('n', '<C-z>', '<Esc>')
 -- oo for new line without leaving n
 -- vim.keymap.set('n', 'o', 'o<Esc>')
 vim.keymap.set('n', 'Q', '<nop>')
-vim.keymap.set('n', '<leader>v', '<C-v>')
-vim.keymap.set('v', '<leader>v', '<C-v>')
+vim.keymap.set('n', '<leader>v', '<C-v>', { desc = 'Block Visual' })
+vim.keymap.set('v', '<leader>v', '<C-v>', { desc = 'Block Visual' })
 
 vim.keymap.set('n', '<C-f>', '<cmd>!tmux neww tmux-sessionizer<CR>')
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
